@@ -16,7 +16,7 @@
  Yes, these models exist, but almost exclusively in research and development, not in production.If the model is bulit it will be even faster and accurate than the classical models,and can handle much data load at once and process better the existing classical model.
 ### so why?? :
 #### Future-Proofing:
-   Everyone knows that quantum computing will eventually be a disruptive force. By working on these problems now, companies and governments are building the algorithms and knowledge they will need when the hardware is ready.
+$~~~~~~$ Everyone knows that quantum computing will eventually be a disruptive force. By working on these problems now, companies and governments are building the algorithms and knowledge they will need when the hardware is ready.
 #### Discovering Quantum Advantage: 
   Nobody yet knows for sure which specific types of fraud a quantum computer will be best at finding. Is it better at detecting complex money laundering rings? Or subtle forms of identity theft? Hackathons like this are a way to explore the possibilities.
 #### Talent Development: 
