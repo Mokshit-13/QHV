@@ -40,7 +40,7 @@ Distortion-free: slew rate ≥ max dVo/dt.
 
 741: SR ≈ 0.5 V/µs; internally compensated; offset null pins 1 & 5.
 
-Core closed-loop amplifiers
+# Core closed-loop amplifiers
 
 Inverting amplifier: Av = -Rf/R1; Zin = R1; 180° phase inversion.
 
@@ -90,7 +90,7 @@ Comparator notes: speed improved with positive feedback; logic-compatibility may
 
 Applications: zero/window detector, time marker, phase meter.
 
-Schmitt trigger (hysteresis)
+# Schmitt trigger (hysteresis)
 
 Positive-feedback comparator; thresholds via R1--R2 and ±Vsat.
 
