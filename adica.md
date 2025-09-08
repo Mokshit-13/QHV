@@ -1,10 +1,10 @@
-IC basics
+# IC basics
 
 IC types by function: Analog (op-amps, 555, TL082, 565), Digital (gates, FFs, MUX/DEMUX, counters, ALU), Mixed-signal (ADC/DAC).
 
 Complexity by gates/chip: SSI 3--30, MSI 30--300, LSI 300--3000, VLSI >3000.
 
-Op-amp block and model
+# Op-amp block and model
 
 Stages: input differential (high input resistance, most gain), intermediate differential (extra gain), level shifter (sets DC near 0 V), push--pull output (low output resistance, large swing).
 
@@ -12,7 +12,7 @@ Crossover distortion in push--pull fixed by ~2VBE bias.
 
 Equivalent model: high input resistance, dependent source A-Vid, low output resistance to RL.
 
-Ideal vs practical DC
+# Ideal vs practical DC
 
 Ideal op-amp: A→∞, Ri→∞, Ro→0, BW→∞, CMRR→∞, slew→∞, Vio=0.
 
@@ -32,7 +32,7 @@ PSRR: ΔVios/ΔVCC or ΔVios/ΔVEE.
 
 CMRR: Ad/Acm.
 
-AC essentials
+# AC essentials
 
 Key AC: frequency response, gain-bandwidth product (GBW), slew rate, rise time, settling time.
 
@@ -54,7 +54,7 @@ Non-inverting summer: set gain (1+Rf/R1) to number of inputs for sum; set to 1 f
 
 Subtractor (difference amp): with R2/R1 = R4/R3, Vo = (R2/R1)(Vy - Vx).
 
-Instrumentation amplifier
+# Instrumentation amplifier
 
 Three op-amps: two non-inverting buffers with RG between, then a difference amp.
 
@@ -62,7 +62,7 @@ Overall gain: Ad = (R2/R1)-(1 + 2R/RG) where R are the equal series resistors.
 
 Features: high gain accuracy, high CMRR, low drift, low offset, low output resistance.
 
-Differentiator
+# Differentiator
 
 Ideal: Vo = -Rf C1 dVin/dt; |A| = ω Rf C1; noisy/unstable at high frequency.
 
@@ -72,7 +72,7 @@ Design: choose fa = highest needed; pick C1 < 1 µF → Rf = 1/(2π fa C1); set 
 
 Sine in → cosine out.
 
-Integrator
+# Integrator
 
 Ideal: Vo(t) = -(1/R1Cf) ∫ Vin dt + Vo(initial); Vo/Vin = -1/(s R1 Cf); slope -20 dB/dec.
 
@@ -102,7 +102,7 @@ Hysteresis: Vhy = 2(R1/(R1+R2))-Vsat.
 
 Output: clean square for noisy/sine/saw inputs.
 
-Multivibrators (op-amp)
+# Multivibrators (op-amp)
 
 Astable: β = R2/(R1+R2); RC at (-) ramps until ±βVsat, then flips.
 
@@ -112,7 +112,7 @@ Monostable: one stable state; triggered via differentiator and diodes; pulse wid
 
 T = RC ln((VD1 + Vsat)/((1-β)Vsat)); for R1 = R2 and Vsat ≫ VD1 → T ≈ 0.693 RC.
 
-Triangular wave generator
+# Triangular wave generator
 
 Comparator A1 drives integrator A2; divider R2--R3 sets switching thresholds.
 
@@ -120,7 +120,7 @@ Triangular amplitude: Vramp = (R2/R3)-Vsat; Vo(pp) = 2(R2/R3)-Vsat.
 
 Frequency: fo = R3/(4 R1 C1 R2); increases with R3, decreases with R1, C1, R2.
 
-Sample and hold
+# Sample and hold
 
 EMOSFET switch controlled by Vc, hold capacitor C, output buffer A2.
 
@@ -128,7 +128,7 @@ Sample: Vc high → C tracks Vin; Hold: Vc low → C holds via buffer's high inp
 
 Uses: ADCs, DACs, demuxing, DVMs, data distribution, reconstruction filters.
 
-BITS quick hits
+# BITS quick hits
 
 Differentiator: sine → cosine; Integrator: square → triangular; Schmitt trigger: square output; Integrator is low-pass in behavior.
 
